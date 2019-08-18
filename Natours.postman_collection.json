@@ -1,0 +1,182 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Natours",
+		"_postman_id": "f019fc73-7209-466b-4245-3efba7e64429",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tours",
+			"description": "",
+			"item": [
+				{
+					"name": "All tours",
+					"request": {
+						"url": "http://127.0.0.1:3000/api/v1/tours",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"nguyenducluongphat7049@gmail.com\",\n\t\"password\": \"PHATphat\"\n}"
+						},
+						"description": "get all tours"
+					},
+					"response": []
+				},
+				{
+					"name": "create new tour",
+					"request": {
+						"url": "http://127.0.0.1:3000/api/v1/tours",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Test Tour 15\",\n\t\"duration\": 10,\n\t\"difficult\": \"easy\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get specific tour",
+					"request": {
+						"url": "http://127.0.0.1:3000/api/v1/tours/15",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update tour",
+					"request": {
+						"url": "http://127.0.0.1:3000/api/v1/tours/13",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"duration\": \"111\",\n\t\"difficult\": \"hard\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete specific tour",
+					"request": {
+						"url": "http://127.0.0.1:3000/api/v1/tours/5d58c0bd46c5f01f9cbb0cf0",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "query all tour ",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/tours?test=23",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tours"
+							],
+							"query": [
+								{
+									"key": "test",
+									"value": "23",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "top-5-cheap",
+					"request": {
+						"url": "http://127.0.0.1:3000/api/v1/tours/top-5-cheap",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "tour-stats",
+					"request": {
+						"url": "http://127.0.0.1:3000/api/v1/tours/tour-stats",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "get all users",
+					"request": {
+						"url": "http://127.0.0.1:3000/api/v1/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"phatndl\",\n\t\"email\": \"nguyenducluongphat704999@gmail.com\",\n\t\"password\": \"phat\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
